@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="assets/css/all.min.css" rel="stylesheet" />
+    <link href="assets/css/style.css" rel="stylesheet" />
+    <title>Collapsible Sidebar with Checkbox and Email Preview</title>
+  </head>
+  <body>
+    <main class="main-wrapper">
+      <div class="sidebar">
+        <img src="assets/image/logo.jpg" alt="logo" />
+        <nav>
+          <a href="#" class="active">
+            <div class="menu-item-wrapper">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-house-door"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4z"
+                />
+              </svg>
+              <p>Dashboard</p>
+            </div>
+          </a>
+          <a href="#">
+            <div class="menu-item-wrapper">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-box2"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M2.95.4a1 1 0 0 1 .8-.4h8.5a1 1 0 0 1 .8.4l2.85 3.8a.5.5 0 0 1 .1.3V15a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V4.5a.5.5 0 0 1 .1-.3zM7.5 1H3.75L1.5 4h6zm1 0v3h6l-2.25-3zM15 5H1v10h14z"
+                />
+              </svg>
+
+              <p>Inbox</p>
+            </div>
+          </a>
+
+          <!-- Prospect Dropdown -->
+          <a
+            data-bs-toggle="collapse"
+            href="#prospectDropdown"
+            role="button"
+            aria-expanded="false"
+            aria-controls="prospectDropdown"
+          >
+            <span class="menu-item-wrapper">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-envelope"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z"
+                />
+              </svg>
+
+              <p>Prospect</p>
+            </span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-caret-down-fill"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"
+              />
+            </svg>
+          </a>
+          <div class="collapse" id="prospectDropdown">
+            <a href="#" class="dropdown-item">Prospect 1</a>
+            <a href="#" class="dropdown-item">Prospect 2</a>
+          </div>
+
+          <!-- Campaigns Dropdown -->
+          <a
+            data-bs-toggle="collapse"
+            href="#campaignsDropdown"
+            role="button"
+            aria-expanded="false"
+            aria-controls="campaignsDropdown"
+          >
+            <span class="menu-item-wrapper">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-key"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M0 8a4 4 0 0 1 7.465-2H14a.5.5 0 0 1 .354.146l1.5 1.5a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0L13 9.207l-.646.647a.5.5 0 0 1-.708 0L11 9.207l-.646.647a.5.5 0 0 1-.708 0L9 9.207l-.646.647A.5.5 0 0 1 8 10h-.535A4 4 0 0 1 0 8m4-3a3 3 0 1 0 2.712 4.285A.5.5 0 0 1 7.163 9h.63l.853-.854a.5.5 0 0 1 .708 0l.646.647.646-.647a.5.5 0 0 1 .708 0l.646.647.646-.647a.5.5 0 0 1 .708 0l.646.647.793-.793-1-1h-6.63a.5.5 0 0 1-.451-.285A3 3 0 0 0 4 5"
+                />
+                <path d="M4 8a1 1 0 1 1-2 0 1 1 0 0 1 2 0" />
+              </svg>
+              <p>Campaigns</p>
+            </span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-caret-down-fill"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"
+              />
+            </svg>
+          </a>
+          <div class="collapse" id="campaignsDropdown">
+            <a href="#" class="dropdown-item">Campaign 1</a>
+            <a href="#" class="dropdown-item">Campaign 2</a>
+          </div>
+
+          <!-- Settings Dropdown -->
+          <a
+            data-bs-toggle="collapse"
+            href="#settingsDropdown"
+            role="button"
+            aria-expanded="false"
+            aria-controls="settingsDropdown"
+          >
+            <span class="menu-item-wrapper">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-gear"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M8 4.754a3.246 3.246 0 1 0 0 6.492 3.246 3.246 0 0 0 0-6.492M5.754 8a2.246 2.246 0 1 1 4.492 0 2.246 2.246 0 0 1-4.492 0"
+                />
+                <path
+                  d="M9.796 1.343c-.527-1.79-3.065-1.79-3.592 0l-.094.319a.873.873 0 0 1-1.255.52l-.292-.16c-1.64-.892-3.433.902-2.54 2.541l.159.292a.873.873 0 0 1-.52 1.255l-.319.094c-1.79.527-1.79 3.065 0 3.592l.319.094a.873.873 0 0 1 .52 1.255l-.16.292c-.892 1.64.901 3.434 2.541 2.54l.292-.159a.873.873 0 0 1 1.255.52l.094.319c.527 1.79 3.065 1.79 3.592 0l.094-.319a.873.873 0 0 1 1.255-.52l.292.16c1.64.893 3.434-.902 2.54-2.541l-.159-.292a.873.873 0 0 1 .52-1.255l.319-.094c1.79-.527 1.79-3.065 0-3.592l-.319-.094a.873.873 0 0 1-.52-1.255l.16-.292c.893-1.64-.902-3.433-2.541-2.54l-.292.159a.873.873 0 0 1-1.255-.52zm-2.633.283c.246-.835 1.428-.835 1.674 0l.094.319a1.873 1.873 0 0 0 2.693 1.115l.291-.16c.764-.415 1.6.42 1.184 1.185l-.159.292a1.873 1.873 0 0 0 1.116 2.692l.318.094c.835.246.835 1.428 0 1.674l-.319.094a1.873 1.873 0 0 0-1.115 2.693l.16.291c.415.764-.42 1.6-1.185 1.184l-.291-.159a1.873 1.873 0 0 0-2.693 1.116l-.094.318c-.246.835-1.428.835-1.674 0l-.094-.319a1.873 1.873 0 0 0-2.692-1.115l-.292.16c-.764.415-1.6-.42-1.184-1.185l.159-.291A1.873 1.873 0 0 0 1.945 8.93l-.319-.094c-.835-.246-.835-1.428 0-1.674l.319-.094A1.873 1.873 0 0 0 3.06 4.377l-.16-.292c-.415-.764.42-1.6 1.185-1.184l.292.159a1.873 1.873 0 0 0 2.692-1.115z"
+                />
+              </svg>
+              <p>Settings</p>
+            </span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-caret-down-fill"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"
+              />
+            </svg>
+          </a>
+          <div class="collapse" id="settingsDropdown">
+            <a href="#" class="dropdown-item">Profile Settings</a>
+            <a href="#" class="dropdown-item">Account Settings</a>
+          </div>
+        </nav>
+      </div>
+
+      <div class="main-content">
+        <div class="top-header">
+          <div class="log-user">
+            <img src="/assets/image/dummy-user.png" />
+          </div>
+          <span>intelous.admin@intelous.com</span>
+        </div>
+        <div class="header">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item">
+                <a href="#">Campaign Management</a>
+              </li>
+              <li class="breadcrumb-item active" aria-current="page">
+                Content
+              </li>
+            </ol>
+          </nav>
+          <h3>Content</h3>
+          <div class="header-nav">
+            <ul id="email-assets">
+              <li>
+                <button
+                  class="toggle-button active"
+                  data-target="email-content"
+                >
+                  <!-- Set active here -->
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-envelope"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z"
+                    />
+                  </svg>
+                  Email Messages
+                </button>
+              </li>
+              <li>
+                <button class="toggle-button" data-target="assets-content">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-stickies"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M1.5 0A1.5 1.5 0 0 0 0 1.5V13a1 1 0 0 0 1 1V1.5a.5.5 0 0 1 .5-.5H14a1 1 0 0 0-1-1z"
+                    />
+                    <path
+                      d="M3.5 2A1.5 1.5 0 0 0 2 3.5v11A1.5 1.5 0 0 0 3.5 16h6.086a1.5 1.5 0 0 0 1.06-.44l4.915-4.914A1.5 1.5 0 0 0 16 9.586V3.5A1.5 1.5 0 0 0 14.5 2zM3 3.5a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 .5.5V9h-4.5A1.5 1.5 0 0 0 9 10.5V15H3.5a.5.5 0 0 1-.5-.5zm7 11.293V10.5a.5.5 0 0 1 .5-.5h4.293z"
+                    />
+                  </svg>
+                  Assets
+                </button>
+              </li>
+            </ul>
+
+            <button class="btn-create-email">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-envelope-plus"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M2 2a2 2 0 0 0-2 2v8.01A2 2 0 0 0 2 14h5.5a.5.5 0 0 0 0-1H2a1 1 0 0 1-.966-.741l5.64-3.471L8 9.583l7-4.2V8.5a.5.5 0 0 0 1 0V4a2 2 0 0 0-2-2zm3.708 6.208L1 11.105V5.383zM1 4.217V4a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v.217l-7 4.2z"
+                />
+                <path
+                  d="M16 12.5a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0m-3.5-2a.5.5 0 0 0-.5.5v1h-1a.5.5 0 0 0 0 1h1v1a.5.5 0 0 0 1 0v-1h1a.5.5 0 0 0 0-1h-1v-1a.5.5 0 0 0-.5-.5"
+                />
+              </svg>
+              Create Email
+            </button>
+          </div>
+        </div>
+
+        <!-- Content Sections -->
+        <div id="content">
+          <div id="email-content" class="content-section active">
+            <!-- Default active content -->
+            <div class="content">
+              <div class="email-list">
+                <div class="email-list-header">
+                  <div class="email-action">
+                    <div class="email-action-icon">
+                      <input
+                        type="checkbox"
+                        onclick="event.stopPropagation();"
+                      />
+                    </div>
+                    <div class="email-action-icon">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        fill="currentColor"
+                        class="bi bi-arrow-clockwise"
+                        viewBox="0 0 16 16"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          d="M8 3a5 5 0 1 0 4.546 2.914.5.5 0 0 1 .908-.417A6 6 0 1 1 8 2z"
+                        />
+                        <path
+                          d="M8 4.466V.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384L8.41 4.658A.25.25 0 0 1 8 4.466"
+                        />
+                      </svg>
+                    </div>
+                    <div class="email-action-icon">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        fill="currentColor"
+                        class="bi bi-trash"
+                        viewBox="0 0 16 16"
+                      >
+                        <path
+                          d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0z"
+                        />
+                        <path
+                          d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4zM2.5 3h11V2h-11z"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="eamil-search">
+                    <input type="text" placeholder="Search email" />
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                      class="bi bi-search"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"
+                      />
+                    </svg>
+                  </div>
+                </div>
+                <div
+                  class="email-item"
+                  onclick="showEmailContent('Hire Top Talent Easily with Naukri', 'Discover the best hiring solutions with Naukri!')"
+                >
+                  <div class="email-item-content">
+                    <input type="checkbox" onclick="event.stopPropagation();" />
+                    <div class="email-item-content-info">
+                      <h6>Automate your Business Process</h6>
+                      <p>
+                        Automate your Business Process -- Get your Business
+                        Process
+                      </p>
+                    </div>
+                  </div>
+                  <div class="email-list-date">
+                    <span>Jul 25</span>
+
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                      class="bi bi-paperclip"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M4.5 3a2.5 2.5 0 0 1 5 0v9a1.5 1.5 0 0 1-3 0V5a.5.5 0 0 1 1 0v7a.5.5 0 0 0 1 0V3a1.5 1.5 0 1 0-3 0v9a2.5 2.5 0 0 0 5 0V5a.5.5 0 0 1 1 0v7a3.5 3.5 0 1 1-7 0z"
+                      />
+                    </svg>
+                  </div>
+                </div>
+                <div
+                  class="email-item"
+                  onclick="showEmailContent('Amazon Great Indian Festival', 'Exclusive deals await Prime members!')"
+                >
+                  <div class="email-item-content">
+                    <input type="checkbox" onclick="event.stopPropagation();" />
+                    <div class="email-item-content-info">
+                      <h6>
+                        Hire Top Talent Easy with Naukri's Assisted Hiring
+                      </h6>
+                      <p>
+                        Automate your Business Process -- Get your Business
+                        Process
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="email-list-date">
+                    <span>Jul 25</span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                      class="bi bi-paperclip"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M4.5 3a2.5 2.5 0 0 1 5 0v9a1.5 1.5 0 0 1-3 0V5a.5.5 0 0 1 1 0v7a.5.5 0 0 0 1 0V3a1.5 1.5 0 1 0-3 0v9a2.5 2.5 0 0 0 5 0V5a.5.5 0 0 1 1 0v7a3.5 3.5 0 1 1-7 0z"
+                      />
+                    </svg>
+                  </div>
+                </div>
+                <!-- Add more email items as needed -->
+              </div>
+              <div class="email-preview">
+                <div id="emailTitle">Survey campaign Email</div>
+                <div id="emailContent" class="email-content"></div>
+              </div>
+            </div>
+          </div>
+          <div id="assets-content" class="content-section">
+            <!-- Hidden by default -->
+            <div class="content">dasdf</div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Bootstrap Bundle with Popper.js -->
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/jquery-3.7.1.min.js"></script>
+
+    <script>
+      // Show email content in the preview area
+      function showEmailContent(title, content) {
+        document.getElementById("emailTitle").innerText = title;
+        document.getElementById("emailContent").innerText = content;
+      }
+    </script>
+
+    <script>
+      // Set the first button as active on page load
+      document.addEventListener("DOMContentLoaded", function () {
+        const firstButton = document.querySelector(
+          "#email-assets .toggle-button"
+        );
+        firstButton.classList.add("active");
+      });
+
+      // Add click event listeners to buttons
+      document
+        .querySelectorAll("#email-assets .toggle-button")
+        .forEach((button) => {
+          button.addEventListener("click", function () {
+            // Remove active class from all buttons
+            document
+              .querySelectorAll("#email-assets .toggle-button")
+              .forEach((btn) => {
+                btn.classList.remove("active");
+              });
+            // Add active class to the clicked button
+            this.classList.add("active");
+          });
+        });
+    </script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Set the first button as active on page load
+        const firstButton = document.querySelector(
+          "#email-assets .toggle-button"
+        );
+        firstButton.classList.add("active");
+
+        // Show the corresponding content for the active button
+        document.querySelector("#email-content").classList.add("active");
+
+        // Add click event listeners to buttons
+        document
+          .querySelectorAll("#email-assets .toggle-button")
+          .forEach((button) => {
+            button.addEventListener("click", function () {
+              // Remove active class from all buttons
+              document
+                .querySelectorAll("#email-assets .toggle-button")
+                .forEach((btn) => {
+                  btn.classList.remove("active");
+                });
+              // Add active class to the clicked button
+              this.classList.add("active");
+
+              // Hide all content sections
+              document
+                .querySelectorAll(".content-section")
+                .forEach((section) => {
+                  section.classList.remove("active");
+                });
+
+              // Show the content corresponding to the clicked button
+              const targetContentId = this.getAttribute("data-target");
+              document.getElementById(targetContentId).classList.add("active");
+            });
+          });
+      });
+    </script>
+  </body>
+</html>
