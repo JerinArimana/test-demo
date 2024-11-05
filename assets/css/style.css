@@ -23,50 +23,6 @@ body {
   position: relative;
 }
 
-@media (max-width: 575.98px) {
-  .sidebar img {
-    max-width: 200px;
-    padding-bottom: 2rem;
-  }
-  .main-wrapper {
-    grid-template-columns: initial !important;
-  }
-}
-@media (max-width: 760px) {
-  .email-list-header {
-    grid-template-columns: repeat(1, 1fr) !important;
-    gap: 1rem;
-  }
-  .email-item {
-    align-items: flex-end !important;
-    flex-direction: column !important;
-  }
-  .btn-create-email {
-    font-size: 0.75rem;
-  }
-  .header .header-nav ul li button {
-    font-size: 0.75rem;
-  }
-  .email-item-content-info h6 {
-    font-size: 0.75rem !important;
-  }
-  .email-item-content-info p {
-    font-size: 0.68rem !important;
-  }
-}
-
-@media (max-width: 760px) {
-  .main-wrapper {
-    grid-template-columns: 155px 1fr;
-  }
-}
-@media (min-width: 760px) {
-  .main-wrapper {
-    grid-template-columns: 240px 1fr;
-  }
-}
-
-/* Sidebar */
 .sidebar {
   /* width: 240px; */
   background-color: #1a1a2e;
@@ -104,7 +60,7 @@ body {
   align-items: center;
   gap: 1rem;
 }
-/* Main Content */
+
 .main-content {
   flex: 1;
   display: flex;
@@ -280,11 +236,11 @@ body {
   box-shadow: 0.1rem 0.11rem 0.5rem 0.01rem;
 }
 .content-section {
-  display: none; /* Hide all content sections by default */
+  display: none;
 }
 
 .content-section.active {
-  display: block; /* Show only the active content section */
+  display: block;
 }
 
 .sidebar nav p {
@@ -298,4 +254,47 @@ body {
 }
 .email-list-date span {
   font-size: 0.75rem;
+}
+
+@media (max-width: 575.98px) {
+  .sidebar img {
+    max-width: 200px;
+    padding-bottom: 2rem;
+  }
+  .main-wrapper {
+    grid-template-columns: initial !important;
+  }
+}
+@media (max-width: 760px) {
+  .email-list-header {
+    grid-template-columns: repeat(1, 1fr) !important;
+    gap: 1rem;
+  }
+  .email-item {
+    align-items: flex-end !important;
+    flex-direction: column !important;
+  }
+  .btn-create-email {
+    font-size: 0.75rem;
+  }
+  .header .header-nav ul li button {
+    font-size: 0.75rem;
+  }
+  .email-item-content-info h6 {
+    font-size: 0.75rem !important;
+  }
+  .email-item-content-info p {
+    font-size: 0.68rem !important;
+  }
+}
+
+@media (max-width: 760px) {
+  .main-wrapper {
+    grid-template-columns: 155px 1fr;
+  }
+}
+@media (min-width: 760px) {
+  .main-wrapper {
+    grid-template-columns: 240px 1fr;
+  }
 }

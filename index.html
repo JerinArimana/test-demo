@@ -49,7 +49,6 @@
             </div>
           </a>
 
-          <!-- Prospect Dropdown -->
           <a
             data-bs-toggle="collapse"
             href="#prospectDropdown"
@@ -91,7 +90,6 @@
             <a href="#" class="dropdown-item">Prospect 2</a>
           </div>
 
-          <!-- Campaigns Dropdown -->
           <a
             data-bs-toggle="collapse"
             href="#campaignsDropdown"
@@ -133,7 +131,6 @@
             <a href="#" class="dropdown-item">Campaign 2</a>
           </div>
 
-          <!-- Settings Dropdown -->
           <a
             data-bs-toggle="collapse"
             href="#settingsDropdown"
@@ -205,7 +202,6 @@
                   class="toggle-button active"
                   data-target="email-content"
                 >
-                  <!-- Set active here -->
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="16"
@@ -264,10 +260,8 @@
           </div>
         </div>
 
-        <!-- Content Sections -->
         <div id="content">
           <div id="email-content" class="content-section active">
-            <!-- Default active content -->
             <div class="content">
               <div class="email-list">
                 <div class="email-list-header">
@@ -394,7 +388,6 @@
                     </svg>
                   </div>
                 </div>
-                <!-- Add more email items as needed -->
               </div>
               <div class="email-preview">
                 <div id="emailTitle">Survey campaign Email</div>
@@ -403,19 +396,16 @@
             </div>
           </div>
           <div id="assets-content" class="content-section">
-            <!-- Hidden by default -->
             <div class="content">dasdf</div>
           </div>
         </div>
       </div>
     </main>
 
-    <!-- Bootstrap Bundle with Popper.js -->
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/jquery-3.7.1.min.js"></script>
 
     <script>
-      // Show email content in the preview area
       function showEmailContent(title, content) {
         document.getElementById("emailTitle").innerText = title;
         document.getElementById("emailContent").innerText = content;
@@ -423,7 +413,6 @@
     </script>
 
     <script>
-      // Set the first button as active on page load
       document.addEventListener("DOMContentLoaded", function () {
         const firstButton = document.querySelector(
           "#email-assets .toggle-button"
@@ -431,18 +420,16 @@
         firstButton.classList.add("active");
       });
 
-      // Add click event listeners to buttons
       document
         .querySelectorAll("#email-assets .toggle-button")
         .forEach((button) => {
           button.addEventListener("click", function () {
-            // Remove active class from all buttons
             document
               .querySelectorAll("#email-assets .toggle-button")
               .forEach((btn) => {
                 btn.classList.remove("active");
               });
-            // Add active class to the clicked button
+
             this.classList.add("active");
           });
         });
@@ -450,37 +437,31 @@
 
     <script>
       document.addEventListener("DOMContentLoaded", function () {
-        // Set the first button as active on page load
         const firstButton = document.querySelector(
           "#email-assets .toggle-button"
         );
         firstButton.classList.add("active");
 
-        // Show the corresponding content for the active button
         document.querySelector("#email-content").classList.add("active");
 
-        // Add click event listeners to buttons
         document
           .querySelectorAll("#email-assets .toggle-button")
           .forEach((button) => {
             button.addEventListener("click", function () {
-              // Remove active class from all buttons
               document
                 .querySelectorAll("#email-assets .toggle-button")
                 .forEach((btn) => {
                   btn.classList.remove("active");
                 });
-              // Add active class to the clicked button
+
               this.classList.add("active");
 
-              // Hide all content sections
               document
                 .querySelectorAll(".content-section")
                 .forEach((section) => {
                   section.classList.remove("active");
                 });
 
-              // Show the content corresponding to the clicked button
               const targetContentId = this.getAttribute("data-target");
               document.getElementById(targetContentId).classList.add("active");
             });
